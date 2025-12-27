@@ -201,8 +201,17 @@ h1 .name {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background-color: #333;
     border: 5px solid var(--secondary-color);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .about-left p {
@@ -376,9 +385,15 @@ h1 .name {
 .project-image {
     width: 100%;
     height: 160px;
-    background-color: #333;
     border-radius: 10px;
     margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .project-card h3 {
