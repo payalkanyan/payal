@@ -166,12 +166,20 @@ h1 .name {
     margin: 0 auto;
 }
 
-.content-section h2 {
-    font-size: 2.5em;
+/* Make the first h2 in each section the small title */
+.content-section > h2:first-of-type {
+    font-size: 1em;
+    font-weight: normal;
     color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
     text-align: center;
-    margin-bottom: 40px;
-    position: relative;
+    margin-bottom: 10px;
+}
+
+/* Remove the underline from the small title */
+.content-section > h2:first-of-type::after {
+    display: none;
 }
 
 .content-section h2::after {
@@ -282,28 +290,33 @@ h1 .name {
     z-index: -1;
 }
 
-#skills h2 {
-    font-size: 1em;
-    font-weight: normal;
-    color: var(--secondary-color);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
 
-#skills h2::after {
-    display: none;
-}
 
-#skills .section-title {
+/* Style the main title */
+.section-title {
     font-size: 2.5em;
     color: var(--text-color);
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     text-align: center;
+    position: relative;
+}
+
+/* Add the divider line to the main title */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    margin: 15px auto 0;
 }
 
 #about .section-title span, #skills .section-title span, #projects .section-title span, #education .section-title span, #contact .section-title span {
-    color: var(--secondary-color);
+    background: linear-gradient(to right, var(--secondary-color), #c866f5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .skills-grid {
