@@ -813,3 +813,199 @@ h1 .name {
         gap: 15px;
     }
 }
+@media (max-width: 768px) {
+
+    /* ===== Global text alignment ===== */
+    body {
+        text-align: center;
+    }
+
+    p {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    /* ===== Section titles ===== */
+    .section-title,
+    .section-subtitle,
+    .content-section > h2:first-of-type {
+        text-align: center;
+    }
+
+    /* ===== About Section ===== */
+    .about-left p {
+        text-align: justify;
+    }
+
+    .stats-container {
+        text-align: center;
+    }
+
+    /* ===== Skills ===== */
+    .skill-card h3 {
+        text-align: center;
+    }
+
+    .skills-list {
+        justify-content: center;
+    }
+
+    /* ===== Projects ===== */
+    .project-card h3,
+    .project-card p {
+        text-align: justify;
+    }
+
+    .project-tags {
+        justify-content: center;
+    }
+
+    .view-code-btn {
+        align-self: center;
+    }
+
+    /* ===== Education ===== */
+    .timeline-content,
+    .experience-content {
+        text-align: justify;
+    }
+
+    .education-column h3 {
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* ===== Contact ===== */
+    .contact-item,
+    .contact-left h4 {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .contact-right form {
+        text-align: left; /* forms read better left-aligned */
+    }
+    p {
+        hyphens: auto;
+    }
+    
+}
+
+@media (max-width: 768px) {
+
+    /* ===== HERO (KEEP CENTERED) ===== */
+    .hero p {
+        text-align: center;
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    .about-left {
+        text-align: center;
+    }
+
+    .about-left p {
+        text-align: center;        /* ⬅️ change from justify */
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.8;
+    }
+
+    .profile-pic-container {
+        margin-bottom: 20px;
+    }
+
+    /* Stats centered already, reinforce */
+    .stats-container {
+        justify-content: center;
+        gap: 30px;
+    }
+}
+/* ===== ABOUT / SKILLS CARDS TEXT CENTER ===== */
+
+.about-card,
+.skill-card,
+.card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media (max-width: 768px) {
+    .about-right {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      align-items: stretch;
+    }
+  
+    .about-card {
+      position: static !important;
+      height: auto !important;
+      min-height: unset !important;
+      margin: 0 !important;
+      padding: 16px;
+      text-align: center;
+    }
+  }
+
+  .substack-pill {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #fff;
+    background: linear-gradient(135deg, #00c2ff);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .substack-pill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px #00c2ff;
+  }
+  @media (max-width: 768px) {
+    .hero,
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+/* ===============================
+   HERO BUTTON ALIGNMENT — SUBSTACK FIX
+   =============================== */
+.hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;       /* space between buttons */
+}
+
+.hero-actions .substack-pill {
+    width: 220px;               /* same as other buttons */
+    padding: 12px 0;            /* match primary button height */
+    border-radius: 8px;         /* match primary/secondary buttons */
+    font-size: 1em;             /* same font size */
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    background: linear-gradient(135deg, #00c2ff, #00aaff);
+    color: #fff;
+    font-weight: bold;
+    box-shadow: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-actions .substack-pill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px #00c2ff;
+}
