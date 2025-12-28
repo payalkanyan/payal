@@ -34,5 +34,20 @@ window.addEventListener("DOMContentLoaded", function() {
         }).catch(error => {
             alert("Oops! There was a problem submitting your form")
         });
+        
+    });
+});
+
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+// Close menu after clicking link
+document.querySelectorAll("#nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
     });
 });

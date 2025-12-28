@@ -312,6 +312,54 @@ h1 .name {
     margin: 15px auto 0;
 }
 
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin: 20px 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .content-section {
+        padding: 80px 20px;
+    }
+
+    .about-container,
+    .education-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
+        grid-template-areas:
+            'proj1'
+            'proj2'
+            'proj3';
+        grid-template-columns: 1fr;
+    }
+
+    .about-right {
+        margin-top: 40px;
+    }
+}
+
 #about .section-title span, #skills .section-title span, #projects .section-title span, #education .section-title span, #contact .section-title span {
     background: linear-gradient(to right, var(--secondary-color), #c866f5);
     -webkit-background-clip: text;
@@ -610,4 +658,158 @@ h1 .name {
 
 .contact-right button:hover {
     box-shadow: 0 0 15px var(--secondary-color);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--text-color);
+    transition: 0.3s;
+}
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        width: calc(100% - 40px);
+    }
+
+    nav {
+        flex-direction: row;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #0a0a0a;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 30px 0;
+        display: none;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: none;
+    }
+
+    .project-card {
+        padding: 12px;
+    }
+
+    .project-image {
+        height: 140px;
+    }
+
+    .project-card h3 {
+        font-size: 1.2em;
+    }
+
+    .project-card p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: none;   /* 🔥 THIS FIXES IT */
+    }
+
+    .projects-grid .project-card {
+        grid-area: auto !important; /* 🔥 VERY IMPORTANT */
+    }
+
+    .project-card.large {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card {
+        padding: 15px;
+    }
+
+    .skill-item {
+        font-size: 0.8em;
+        padding: 4px 10px;
+    }
+}
+@media (max-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-right {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.3em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .buttons .btn {
+        margin: 10px 0;
+        display: block;
+        width: 100%;
+        max-width: 260px;
+    }
+}
+@media (max-width: 768px) {
+    .education-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .education-column {
+        width: 100%;
+    }
+
+    .timeline-item {
+        padding-left: 20px;
+    }
+
+    .experience-card {
+        flex-direction: row;
+        gap: 15px;
+    }
 }
