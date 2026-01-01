@@ -253,6 +253,8 @@ h1 .name {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    justify-content: center;
+    text-align:center;
 }
 
 .about-card {
@@ -938,7 +940,7 @@ h1 .name {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 16px;
-      align-items: stretch;
+      align-items: center;
     }
   
     .about-card {
