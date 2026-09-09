@@ -546,6 +546,59 @@
       background: #ff4400;
       border-color: #ff4400;
     }
+    /* ===============================
+   PROJECT LINKS
+   =============================== */
+
+.actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+.actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--text-color);
+    border: 1px solid #333;
+    transition: all 0.25s ease;
+}
+
+/* Live Demo */
+.actions a:first-child {
+    color: #ff9f43;
+    border-color: #ff9f43;
+    font-weight: 700;
+    background: rgba(255, 159, 67, 0.08);
+}
+
+.actions a:first-child:hover {
+    color: #ffffff !important;
+    background: #ff9f43 !important;
+    border-color: #ff9f43 !important;
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 6px 20px rgba(255, 159, 67, 0.35);
+}
+
+/* Source */
+.actions a:last-child {
+    color: #aaa;
+    background: transparent;
+    border-color: #333;
+}
+
+.actions a:last-child:hover {
+    color: #ff9f43 !important;
+    background: rgba(255, 159, 67, 0.08) !important;
+    border-color: #ff9f43 !important;
+    font-weight: 700;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 4px 15px rgba(255, 159, 67, 0.2);
+}
   </style>
 </head>
 
@@ -809,7 +862,7 @@
         <div class="project-card">
           <h3>Kora</h3>
           <p>
-            RAG-based AWS S3 assistant using HuggingFace and ChromaDb.
+            RAG-based AWS S3 assistant using Ollama and ChromaDb.
           </p>
 
           <div class="tags">
@@ -818,9 +871,18 @@
           </div>
 
           <div class="actions">
-            <!-- <a href="#">Website</a> -->
-            <a href="https://github.com/payalkanyan/readthedocs" target="_blank" rel="noopener noreferrer">Source</a>
-          </div>
+          <a href="http://awsrag.duckdns.org"
+            target="_blank"
+            rel="noopener noreferrer">
+              Live Demo ↗
+          </a>
+
+          <a href="https://github.com/payalkanyan/readthedocs"
+            target="_blank"
+            rel="noopener noreferrer">
+              Source
+          </a>
+      </div>
         </div>
 
         <div class="project-card">

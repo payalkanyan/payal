@@ -1011,3 +1011,54 @@ h1 .name {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px #00c2ff;
 }
+/* ===============================
+   PROJECT LINKS
+   =============================== */
+
+.actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--text-color);
+    border: 1px solid #333;
+    transition: all 0.25s ease;
+}
+
+/* Live Demo - highlighted */
+.actions a:first-child {
+    color: #ff9f43;
+    border: 1px solid #ff9f43;
+    font-weight: 700;
+    background: rgba(255, 159, 67, 0.08);
+}
+
+/* Live Demo hover */
+.actions a:first-child:hover {
+    color: #ffffff;
+    background: #ff9f43;
+    border-color: #ff9f43;
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 6px 20px rgba(255, 159, 67, 0.35);
+}
+
+/* Source link */
+.actions a:last-child {
+    color: #aaa;
+}
+
+/* Source hover */
+.actions a:last-child:hover {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
