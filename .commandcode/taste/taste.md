@@ -1,0 +1,2 @@
+- Prefers using existing local assets over downloading/recurring from the web; when an asset is needed, point to the local copy rather than fetching a URL. Confidence: 0.7
+- Refers to directories using an "@"-prefixed shorthand (e.g., "@assets") when directing file locations. Confidence: 0.6

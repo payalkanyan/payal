@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(curl -sL https://www.tredence.com/wp-content/themes/tredence/assets/images/logo-white.svg -o /home/xoion/payal/assets/tredence.svg)",
+      "Shell(find / -iname \"tredence*\" 2>/dev/null; echo \"---scratchpad---\"; ls -la /tmp/commandcode-1000/-home-xoion-payal/817e0970-9f2c-4806-9c4d-0beee552ed6a/scratchpad/assets/ 2>/dev/null; echo \"---done---\")"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}
