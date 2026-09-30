@@ -343,6 +343,31 @@
       line-height: 1.45;
     }
 
+    /* Publications */
+    .pub-card {
+      border: 1px solid #e6e6e6;
+      border-radius: 10px;
+      padding: 16px;
+    }
+
+    .pub-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 4px 0;
+    }
+
+    .pub-venue {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0 0 10px 0;
+    }
+
+    .pub-card p {
+      margin: 0;
+      color: #555;
+      line-height: 1.45;
+    }
+
     .tags span {
       display: inline-block;
       background: var(--panel-bg);
@@ -714,6 +739,22 @@
             <li>Developed Python integrations for 10+ APIs. </li>
             <li>Achieved 99.9% test accuracy with automated unit testing pipelines.</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+
+      <div class="pub-card">
+        <div class="pub-title">Post-Audit Mirage: Identifiability Limits of Offline Agent Verification</div>
+        <div class="pub-venue">NeurIPS 2026 Workshop on Verify Agents (Poster)</div>
+        <p>
+          Designed the matched-world benchmark spec and its formal evaluation contract (access layers, harm definitions, transport-gap estimand) for testing whether offline audits identify deployment safety.
+        </p>
+
+        <div class="actions">
+          <a href="https://github.com/beingamanforever/Post-Audit-Mirage" target="_blank" rel="noopener noreferrer">Repository</a>
         </div>
       </div>
     </section>
