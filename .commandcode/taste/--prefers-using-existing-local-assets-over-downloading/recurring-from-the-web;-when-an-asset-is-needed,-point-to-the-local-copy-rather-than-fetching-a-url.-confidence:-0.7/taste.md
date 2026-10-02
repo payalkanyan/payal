@@ -1,3 +1,4 @@
+# - Prefers using existing local assets over downloading/recurring from the web; when an asset is needed, point to the local copy rather than fetching a URL. Confidence: 0.7
 - Prefers using existing local assets over downloading/recurring from the web; when an asset is needed, point to the local copy rather than fetching a URL. Confidence: 0.7
 - Refers to directories using an "@"-prefixed shorthand (e.g., "@assets") when directing file locations. Confidence: 0.6
 - Prefers new sections/content to match the existing formatting and styling of the portfolio (reuse existing card layouts, heading styles, and action/link styling rather than introducing new patterns). Confidence: 0.7

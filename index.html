@@ -496,6 +496,10 @@
     }
 
     /* Article Carousel */
+    .carousel-wrapper {
+      position: relative;
+    }
+
     .article-carousel {
       display: flex;
       gap: 16px;
@@ -509,6 +513,39 @@
       /* IE/Edge */
       scrollbar-width: none;
       /* Firefox */
+    }
+
+    .scroll-hint {
+      position: absolute;
+      right: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--panel-bg);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 1;
+      transition: opacity .25s ease;
+      animation: hint-pulse .2s ease-in-out 1.5s both;
+    }
+
+    .scroll-hint.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    @keyframes hint-pulse {
+      0% { transform: translateY(-50%) translateX(0); }
+      50% { transform: translateY(-50%) translateX(3px); }
+      100% { transform: translateY(-50%) translateX(0); }
     }
 
     .article-carousel::-webkit-scrollbar {
@@ -636,7 +673,7 @@
       <div>
         <h1>Hi, I'm Payal</h1>
         <div class="subtitle">
-          Designing AI systems with engineering discipline.
+          AI engineer focused on agent reliability and evaluation.
         </div>
       </div>
       <div class="avatar"><img src="assets/me.jpg" /></div>
@@ -645,15 +682,15 @@
     <section>
       <h2>About</h2>
       <p>
-        IIT Roorkee'26 grad building production AI/ML systems - RAG pipelines, containerized inference services,
-        and
-        semantic retrieval. Open to ML/AI Engineering roles.
+      IIT Roorkee'26 grad. AI engineer who builds agent systems and knows how to evaluate whether they actually work.
+      
       </p>
     </section>
 
     <section id="writing">
       <h2>Latest Writing</h2>
-      <div class="article-carousel">
+      <div class="carousel-wrapper">
+        <div class="article-carousel">
         <a href="https://payalkanyan.substack.com/p/linear-algebra-for-machine-learning-9f3" target="_blank"
           class="article-card">
           <div class="article-date">Jan 28, 2026</div>
@@ -676,8 +713,9 @@
           <h3 class="article-title" style="margin-bottom: 8px;">View all articles</h3>
           <span style="font-size: 14px; color: var(--muted);">payalkanyan.substack.com →</span>
         </a>
+        <span class="scroll-hint">›</span>
       </div>
-    </section>
+    </div>
 
     <section>
       <h2>Work Experience</h2>
@@ -737,10 +775,11 @@
         <div class="job-desc">
           <ul>
             <li>Developed Python integrations for 10+ APIs. </li>
-            <li>Achieved 99.9% test accuracy with automated unit testing pipelines.</li>
+            <li>Achieved 99.9% test coverage with automated unit testing pipelines.</li>
           </ul>
         </div>
       </div>
+      
     </section>
 
     <section>
@@ -1050,6 +1089,28 @@
   <script>
     function toggleCard(card) {
       card.classList.toggle('open');
+    }
+  </script>
+
+  <script>
+    // Article carousel scroll hint
+    const carousel = document.querySelector(".article-carousel");
+    const scrollHint = document.querySelector(".scroll-hint");
+
+    if (carousel && scrollHint) {
+      function updateHint() {
+        const hasOverflow = carousel.scrollLeft + carousel.clientWidth < carousel.scrollWidth - 1;
+        scrollHint.classList.toggle("hidden", !hasOverflow);
+      }
+
+      carousel.addEventListener("scroll", updateHint);
+      window.addEventListener("resize", updateHint);
+      updateHint();
+
+      scrollHint.addEventListener("click", () => {
+        carousel.scrollBy({ left: 360, behavior: "smooth" });
+        setTimeout(updateHint, 400);
+      });
     }
   </script>
 
