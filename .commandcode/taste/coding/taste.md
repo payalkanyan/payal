@@ -1,0 +1,1 @@
+- Prefers minimal, targeted fixes over structural refactoring; willing to revert architectural changes (e.g., separating shared CSS classes) when a simpler surgical solution solves the problem. Confidence: 0.85

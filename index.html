@@ -394,6 +394,11 @@
       margin-right: 6px;
     }
 
+    /* Code button in publications - ensure visible text on black bg */
+    .pub-card .actions a:nth-child(2) {
+      color: #fff;
+    }
+
     @media (max-width: 720px) {
       .projects-grid {
         grid-template-columns: 1fr;
@@ -626,7 +631,7 @@
     border-radius: 8px;
     text-decoration: none;
     font-weight: 500;
-    color: var(--text-color);
+    color: var(--text);
     border: 1px solid #333;
     transition: all 0.25s ease;
 }

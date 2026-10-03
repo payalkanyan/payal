@@ -1,0 +1,1 @@
+- Does not want default blue hyperlinks in their portfolio; prefers styled/custom link colors instead of the browser default link color. Confidence: 0.70
