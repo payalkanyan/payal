@@ -727,13 +727,14 @@ body.dark .resume-btn:hover {
         <div class="pub-title">Post-Audit Mirage: Identifiability Limits of Offline Agent Verification</div>
         <div class="pub-venue">NeurIPS 2026 Workshop VerifyAgents (Poster)</div>
         <p>
-          Designed the matched-world benchmark spec and its formal evaluation contract (access layers, harm definitions, transport-gap estimand) for testing whether offline audits identify deployment safety.
+          Benchmark for the Audit-View Non-Identifiability Theorem, proving an error-abstention tradeoff for offline
+          agent verifiers across 272 matched safe-harmful world pairs.
         </p>
 
         <div class="actions">
-          <a href="https://openreview.net/forum?id=6cQdbUSme7" target="_blank" rel="noopener noreferrer">Paper ↗</a>
+          <!-- <a href="https://openreview.net/forum?id=6cQdbUSme7" target="_blank" rel="noopener noreferrer">Paper ↗</a> -->
           <a href="https://github.com/beingamanforever/Post-Audit-Mirage" target="_blank" rel="noopener noreferrer">Code ↗</a>
-          <a href="https://hackmd.io/@0xpastrilss/phase0-verifieragents" target="_blank" rel="noopener noreferrer">Design doc ↗</a>
+          <!-- <a href="https://hackmd.io/@0xpastrilss/phase0-verifieragents" target="_blank">Design doc ↗</a> -->
           
         </div>
       </div>
@@ -786,9 +787,9 @@ body.dark .resume-btn:hover {
         </div>
         <div class="job-desc">
           <ul>
-            <li>Built demand-pattern analysis on 100K+ daily pharmaceutical transactions (PySpark, Databricks), projecting ~20% savings in inventory holding costs.</li>
-            <li>Automated PySpark checks in Bronze–Silver–Gold ETL pipeline, flagging and quarantining 4.5% of bad records. </li>
-            <li>Reduced analytical query latency by 50.4% by migrating normalized transactional data to a Star Schema and optimizing Delta tables for scalable analytical workloads. </li>
+            <li>Configured Genie One in Databricks for production-ready KPI retrieval through metric views.</li>
+            <li>Designed retrieval architecture routing queries by complexity across Genie One, metric views and fact tables, with fallback models to cut hallucination.</li>
+            <li>Improved answer accuracy from 70% to 95.4% with refined instructions and few-shot question-to-SQL examples.</li>
           </ul>
         </div>
       </div>
@@ -806,8 +807,11 @@ body.dark .resume-btn:hover {
           </div>
         </div>
         <div class="job-desc">
-          <li>Built regression models on 5,000+ material records to predict the melting score of anti-icing pavement materials. </li>
-          <li>Compared Random Forest and XGBoost using 5-fold CV; hyperparameter tuning reduced RMSE by 18%.</li>
+          <ul>
+            <li>Built regression models on 5,000+ material records to predict anti-icing performance of road pavements.</li>
+            <li>Benchmarked Random Forest and XGBoost with 5-fold CV; tuning reduced RMSE by 18%.</li>
+            <li>Ranked materials by predicted melting score and used SHAP to find the key driving feature.</li>
+          </ul>
 
         </div>
       </div>
@@ -826,8 +830,9 @@ body.dark .resume-btn:hover {
         </div>
         <div class="job-desc">
           <ul>
-            <li>Developed Python integrations for 10+ APIs. </li>
-            <li>Achieved 99.9% test coverage with automated unit testing pipelines.</li>
+            <li>Integrated 10+ DeFi protocols into a liquidity aggregator, expanding protocol coverage 3x.</li>
+            <li>Resolved 8+ routing logic defects, improving swap quote accuracy to 99.9%.</li>
+            <li>Improved test coverage from 93% to 98% across all protocol integrations.</li>
           </ul>
         </div>
       </div>
@@ -951,7 +956,7 @@ body.dark .resume-btn:hover {
         </h2>
 
         <p style="margin-top:6px; color:#555; line-height:1.45;">
-          I've worked on a variety of AI/ML projects, from Classification to RAG systems.
+          I've worked on a variety of AI/ML projects, from Classification to RAG systems to Eval Harnesses.
           Here are a few of my favorites.
         </p>
       </div>
@@ -961,10 +966,28 @@ body.dark .resume-btn:hover {
 
         <!-- Project Card -->
         <div class="project-card">
+          <h3>Hinglish Caller Bench</h3>
+          <p>
+            Open-source PyPI eval harness that tests customer-service AI agents with simulated Indian callers. Grades
+            task completion, tool correctness and language fit orthogonally, reporting pass^k metrics.
+          </p>
+
+          <div class="tags">
+            <span>Agent Evaluation</span><span>LLM Benchmarks</span><span>Python</span><span>PyPI</span>
+          </div>
+
+          <div class="actions">
+            <a href="https://github.com/payalkanyan/hinglish-caller-bench" target="_blank"
+              rel="noopener noreferrer">Source</a>
+          </div>
+        </div>
+
+        <!-- Project Card -->
+        <div class="project-card">
           <h3>Personal Knowledge OS</h3>
           <p>
-            Stateful LangGraph agent enabling autonomous tool-routing between local databases and web search. Features
-            Qdrant vector search, Neo4j graph traversal, and a Chrome extension for web context capture.
+            Dockerised RAG system with a stateful LangGraph agent routing between personal-memory and live-web tools.
+            Hybrid retriever fuses Qdrant dense-vector and Neo4j graph results via RRF, then a Cross-Encoder.
           </p>
 
           <div class="tags">
@@ -999,7 +1022,8 @@ body.dark .resume-btn:hover {
         <div class="project-card">
           <h3>Readthedocs</h3>
           <p>
-            RAG-based AWS S3 assistant using Ollama and ChromaDb.
+            LangChain RAG pipeline over AWS docs with HuggingFace embeddings, ChromaDB and FastAPI. Eval harness scores
+            Recall@k, MRR, citation accuracy and abstention with a separate Mistral judge.
           </p>
 
           <div class="tags">
