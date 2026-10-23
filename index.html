@@ -394,11 +394,6 @@
       margin-right: 6px;
     }
 
-    /* Code button in publications - ensure visible text on black bg */
-    .pub-card .actions a:nth-child(2) {
-      color: #fff;
-    }
-
     @media (max-width: 720px) {
       .projects-grid {
         grid-template-columns: 1fr;
@@ -734,7 +729,7 @@ body.dark .resume-btn:hover {
         <div class="actions">
           <!-- <a href="https://openreview.net/forum?id=6cQdbUSme7" target="_blank" rel="noopener noreferrer">Paper ↗</a> -->
           <a href="https://github.com/beingamanforever/Post-Audit-Mirage" target="_blank" rel="noopener noreferrer">Code ↗</a>
-          <!-- <a href="https://hackmd.io/@0xpastrilss/phase0-verifieragents" target="_blank">Design doc ↗</a> -->
+          <a href="https://hackmd.io/@0xpastrilss/phase0-verifieragents" target="_blank">Design doc ↗</a>
           
         </div>
       </div>
@@ -978,6 +973,27 @@ body.dark .resume-btn:hover {
 
           <div class="actions">
             <a href="https://github.com/payalkanyan/hinglish-caller-bench" target="_blank"
+              rel="noopener noreferrer">Source</a>
+          </div>
+        </div>
+
+        <!-- Project Card -->
+        <div class="project-card">
+          <h3>Bolna Language-Switch Eval</h3>
+          <p>
+            Eval harness testing whether Bolna's open-source voice agent picks the right language mid-call, over 43
+            cases. Its judge scored 91.7% accurate but falsely switched 11.1% of the time; found a crash on
+            every Gemini agent with 2+ tools.
+          </p>
+
+          <div class="tags">
+            <span>Voice Agents</span><span>Eval Harness</span><span>LiteLLM</span><span>Gemini</span>
+          </div>
+
+          <div class="actions">
+            <a href="https://claude.ai/artifact/P6nmBtFVhbN6jc68TSWJWG" target="_blank"
+              rel="noopener noreferrer">Report ↗</a>
+            <a href="https://github.com/payalkanyan/bolna-test" target="_blank"
               rel="noopener noreferrer">Source</a>
           </div>
         </div>
