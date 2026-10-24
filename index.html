@@ -627,6 +627,7 @@
     text-decoration: none;
     font-weight: 500;
     color: var(--text);
+    background: transparent;
     border: 1px solid #333;
     transition: all 0.25s ease;
 }
@@ -648,13 +649,13 @@
 }
 
 /* Source */
-.actions a:last-child {
+.actions a:not(:first-child) {
     color: #aaa;
     background: transparent;
     border-color: #333;
 }
 
-.actions a:last-child:hover {
+.actions a:not(:first-child):hover {
     color: #ff9f43 !important;
     background: rgba(255, 159, 67, 0.08) !important;
     border-color: #ff9f43 !important;
@@ -727,7 +728,7 @@ body.dark .resume-btn:hover {
         </p>
 
         <div class="actions">
-          <!-- <a href="https://openreview.net/forum?id=6cQdbUSme7" target="_blank" rel="noopener noreferrer">Paper ↗</a> -->
+          <a href="https://arxiv.org/abs/2610.31130" target="_blank" rel="noopener noreferrer">Paper ↗</a>
           <a href="https://github.com/beingamanforever/Post-Audit-Mirage" target="_blank" rel="noopener noreferrer">Code ↗</a>
           <a href="https://hackmd.io/@0xpastrilss/phase0-verifieragents" target="_blank">Design doc ↗</a>
           
